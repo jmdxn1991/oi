@@ -9,7 +9,7 @@ const year = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Organic Intelligence-informed coaching for traders navigating pressure, uncertainty and high-performance decision-making."
+      content="Coaching for traders navigating pressure, uncertainty and high-performance decision-making."
     />
     <meta name="theme-color" content="#f7f6f2" />
     <title>Trading Mind — Coaching for Traders</title>
@@ -23,25 +23,18 @@ const year = new Date().getFullYear();
 
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Trading Mind home">
-        trading<span>mind</span><span class="brand-dot">.</span>
-      </a>
+      <a class="brand" href="/" aria-label="Trading Mind home">trading<span>mind</span></a>
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#approach">Approach</a>
-        <a href="#coaching">Coaching</a>
-        <a class="nav-course" href="/course">Free course <span>↗</span></a>
-        <a class="nav-cta" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-          Get in touch <span>↗</span>
-        </a>
+        <a href="/course">Free course</a>
+        <a class="nav-cta" href="#contact">Get in touch</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> ORGANIC INTELLIGENCE · TRADING</p>
-
           <h1>Trading puts your nervous system <em>under pressure.</em></h1>
 
           <p class="hero-subtitle">Develop the capacity to meet it.</p>
@@ -52,25 +45,12 @@ const year = new Date().getFullYear();
           </p>
 
           <div class="hero-actions">
-            <a class="button button-dark" href="#coaching">
-              Explore coaching <span>↗</span>
-            </a>
-            <a class="text-link" href="/course">Explore the free course <span>→</span></a>
-          </div>
-        </div>
-
-        <div class="hero-aside" aria-hidden="true">
-          <div class="aside-rule"></div>
-          <p class="aside-number">01 / 03</p>
-          <p class="aside-label">PERFORMANCE<br />IS MORE THAN STRATEGY</p>
-          <div class="aside-mark">
-            <span></span><span></span><span></span><span></span><span></span>
+            <a class="button button-dark" href="#contact">Explore coaching</a>
           </div>
         </div>
       </section>
 
       <section class="intro-section">
-        <div class="section-index">01 <span>—</span> THE CHALLENGE</div>
         <div class="intro-content">
           <h2>You can know exactly what to do — and still struggle to do it.</h2>
           <div class="intro-body">
@@ -88,7 +68,6 @@ const year = new Date().getFullYear();
       </section>
 
       <section class="approach-section" id="approach">
-        <div class="section-index">02 <span>—</span> THE APPROACH</div>
         <div class="section-heading">
           <h2>Build capacity,<br /><em>not just control.</em></h2>
           <p>
@@ -99,7 +78,6 @@ const year = new Date().getFullYear();
 
         <div class="principles">
           <article class="principle">
-            <p class="card-number">01</p>
             <h3>Understand your responses</h3>
             <p>
               Explore how pressure, uncertainty and activation shape your
@@ -108,7 +86,6 @@ const year = new Date().getFullYear();
           </article>
 
           <article class="principle">
-            <p class="card-number">02</p>
             <h3>Develop greater capacity</h3>
             <p>
               Build your ability to meet challenging experiences without relying
@@ -117,7 +94,6 @@ const year = new Date().getFullYear();
           </article>
 
           <article class="principle">
-            <p class="card-number">03</p>
             <h3>Make room for more choice</h3>
             <p>
               Develop a more flexible relationship with pressure, so difficult
@@ -127,53 +103,20 @@ const year = new Date().getFullYear();
         </div>
       </section>
 
-      <section class="coaching-section" id="coaching">
-        <div class="section-index">03 <span>—</span> ONE-TO-ONE COACHING</div>
-
-        <div class="coaching-grid">
-          <div class="coaching-heading">
-            <p class="eyebrow">WORK WITH THE PERSON BEHIND THE TRADER</p>
-            <h2>How you meet the pressure is part of the <em>performance.</em></h2>
-          </div>
-
-          <div class="coaching-copy">
-            <p>
-              Organic Intelligence is a nervous-system-informed approach that
-              emphasises orientation, connection and the development of capacity.
-            </p>
-            <p>
-              Rather than trying to force yourself into the right state, we work
-              with your experience as it unfolds. Sessions are tailored to you
-              and the demands you're navigating.
-            </p>
-            <p>
-              The focus is on your relationship with pressure, not on providing
-              trading signals, strategies or financial advice.
-            </p>
-
-            <a class="button button-dark" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-              Reach out on X <span>↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-section">
-        <p class="eyebrow">START A CONVERSATION</p>
+      <section class="contact-section" id="contact">
         <h2>Interested in working together?</h2>
         <p>
           Get in touch to talk about what you're experiencing and whether
           one-to-one coaching could be a fit.
         </p>
         <a class="button button-light" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-          Get in touch <span>↗</span>
+          Get in touch
         </a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="/">trading<span>mind</span><span class="brand-dot">.</span></a>
-      <p>Organic Intelligence for Traders</p>
+      <a class="brand footer-brand" href="/">trading<span>mind</span></a>
       <p class="copyright">© {year} Trading Mind</p>
     </footer>
   </body>
@@ -237,8 +180,7 @@ const year = new Date().getFullYear();
     line-height: 1;
   }
 
-  .brand > span:first-child { font-weight: 400; }
-  .brand .brand-dot { color: var(--olive); font-weight: 700; }
+  .brand > span { font-weight: 400; }
 
   .nav-links {
     display: flex;
@@ -250,7 +192,6 @@ const year = new Date().getFullYear();
   .nav-links a {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
     color: #55574f;
     font-size: 12px;
     font-weight: 500;
@@ -259,8 +200,6 @@ const year = new Date().getFullYear();
   }
 
   .nav-links a:hover { color: var(--olive); }
-
-  .nav-links .nav-course { color: var(--ink); }
 
   .nav-links .nav-cta {
     padding: 10px 15px;
@@ -276,33 +215,14 @@ const year = new Date().getFullYear();
   }
 
   .hero {
-    min-height: 575px;
-    padding: 105px 7.2% 90px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 150px;
+    min-height: 545px;
+    padding: 110px 7.2% 100px;
+    display: flex;
     align-items: center;
-    gap: 8%;
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-copy { max-width: 750px; }
-
-  .eyebrow {
-    margin: 0 0 26px;
-    color: var(--olive);
-    font-size: 10px;
-    font-weight: 650;
-    letter-spacing: 1.7px;
-    line-height: 1.6;
-  }
-
-  .eyebrow-line {
-    display: inline-block;
-    width: 23px;
-    height: 1px;
-    margin: 0 10px 3px 0;
-    background: var(--olive);
-  }
+  .hero-copy { max-width: 790px; }
 
   h1, h2, h3, p { margin-top: 0; }
 
@@ -335,12 +255,7 @@ const year = new Date().getFullYear();
     line-height: 1.9;
   }
 
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 23px;
-  }
+  .hero-actions { display: flex; flex-wrap: wrap; align-items: center; }
 
   .button {
     min-height: 47px;
@@ -348,7 +263,6 @@ const year = new Date().getFullYear();
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
     font-size: 12px;
     font-weight: 550;
     transition: background 160ms ease, color 160ms ease;
@@ -361,58 +275,10 @@ const year = new Date().getFullYear();
 
   .button-dark:hover { background: #45483d; }
 
-  .text-link, .text-link:visited {
-    color: var(--ink);
-    font-size: 12px;
-    font-weight: 550;
-  }
-
-  .text-link span { margin-left: 5px; color: var(--olive); }
-
-  .hero-aside {
-    align-self: end;
-    padding-bottom: 15px;
-    color: var(--muted);
-  }
-
-  .aside-rule { width: 100%; height: 1px; margin-bottom: 15px; background: var(--line); }
-  .aside-number { margin-bottom: 40px; font-size: 10px; letter-spacing: 1.4px; }
-  .aside-label { font-size: 9px; font-weight: 600; letter-spacing: 1.4px; line-height: 1.9; }
-
-  .aside-mark {
-    height: 56px;
-    margin-top: 27px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
-
-  .aside-mark span {
-    width: 5px;
-    border-radius: 5px;
-    background: #a7ab96;
-  }
-
-  .aside-mark span:nth-child(1) { height: 18px; }
-  .aside-mark span:nth-child(2) { height: 34px; }
-  .aside-mark span:nth-child(3) { height: 49px; background: var(--olive); }
-  .aside-mark span:nth-child(4) { height: 29px; }
-  .aside-mark span:nth-child(5) { height: 14px; }
-
-  .intro-section, .approach-section, .coaching-section {
+  .intro-section, .approach-section {
     padding: 92px 7.2%;
     border-bottom: 1px solid var(--line);
   }
-
-  .section-index {
-    margin-bottom: 42px;
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1.45px;
-  }
-
-  .section-index span { margin: 0 7px; color: var(--olive); }
 
   .intro-content {
     display: grid;
@@ -455,21 +321,11 @@ const year = new Date().getFullYear();
     border-bottom: 1px solid var(--line);
   }
 
-  .principle {
-    min-height: 225px;
-    padding: 25px 28px 27px 0;
-  }
+  .principle { min-height: 210px; padding: 27px 28px 27px 0; }
 
   .principle + .principle {
     padding-left: 28px;
     border-left: 1px solid var(--line);
-  }
-
-  .card-number {
-    margin-bottom: 31px;
-    color: var(--olive);
-    font-size: 11px;
-    letter-spacing: 1px;
   }
 
   .principle h3 {
@@ -479,25 +335,12 @@ const year = new Date().getFullYear();
     letter-spacing: -0.4px;
   }
 
-  .principle > p:last-child {
+  .principle > p {
     margin-bottom: 0;
     color: var(--muted);
     font-size: 13px;
     line-height: 1.9;
   }
-
-  .coaching-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.78fr;
-    gap: 13%;
-    align-items: start;
-  }
-
-  .coaching-heading .eyebrow { margin-bottom: 22px; }
-  .coaching-heading h2 { max-width: 520px; }
-  .coaching-copy { padding-top: 4px; color: var(--muted); }
-  .coaching-copy p { margin-bottom: 19px; }
-  .coaching-copy .button { margin-top: 12px; }
 
   .contact-section {
     padding: 88px 7.2% 96px;
@@ -507,9 +350,9 @@ const year = new Date().getFullYear();
     text-align: center;
   }
 
-  .contact-section .eyebrow { margin-bottom: 19px; }
   .contact-section h2 { font-size: clamp(30px, 4vw, 44px); }
-  .contact-section > p:not(.eyebrow) {
+
+  .contact-section > p {
     max-width: 480px;
     margin: 17px 0 27px;
     color: var(--muted);
@@ -538,7 +381,7 @@ const year = new Date().getFullYear();
 
   @media (min-width: 1500px) {
     .site-header, .hero, .intro-section, .approach-section,
-    .coaching-section, .contact-section, .site-footer {
+    .contact-section, .site-footer {
       padding-left: max(7.2%, calc((100vw - 1240px) / 2));
       padding-right: max(7.2%, calc((100vw - 1240px) / 2));
     }
@@ -563,23 +406,12 @@ const year = new Date().getFullYear();
     .nav-links a { font-size: 12px; }
     .nav-links .nav-cta { padding: 7px 10px; }
 
-    .hero {
-      min-height: auto;
-      padding: 76px 6% 66px;
-      grid-template-columns: 1fr;
-      gap: 43px;
-    }
-
+    .hero { min-height: auto; padding: 78px 6% 70px; }
     h1 { font-size: clamp(43px, 10vw, 65px); letter-spacing: -2.8px; }
-    .hero-aside { display: none; }
 
-    .intro-section, .approach-section, .coaching-section {
-      padding: 66px 6%;
-    }
+    .intro-section, .approach-section { padding: 66px 6%; }
 
-    .section-index { margin-bottom: 29px; }
-
-    .intro-content, .section-heading, .coaching-grid {
+    .intro-content, .section-heading {
       grid-template-columns: 1fr;
       gap: 25px;
     }
@@ -594,11 +426,8 @@ const year = new Date().getFullYear();
     }
 
     .principle + .principle { border-top: 1px solid var(--line); }
-    .card-number { margin-bottom: 17px; }
-
     .contact-section { padding: 70px 6%; }
-    .site-footer { padding: 24px 6%; flex-wrap: wrap; }
-    .site-footer p { width: 100%; }
+    .site-footer { padding: 24px 6%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
