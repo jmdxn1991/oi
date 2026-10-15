@@ -1,78 +1,105 @@
+
 ---
-import BaseHead from '../components/BaseHead.astro';
+const year = new Date().getFullYear();
 ---
 
-<!doctype html>
 <html lang="en">
   <head>
-    <BaseHead
-      title="Trading Mind — Organic Intelligence for Traders"
-      description="One-to-one Organic Intelligence coaching for traders. Develop the capacity to meet uncertainty, stress and the demands of trading."
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Organic Intelligence-informed coaching for traders navigating pressure, uncertainty and high-performance decision-making."
+    />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>Trading Mind — Coaching for Traders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
+      rel="stylesheet"
     />
   </head>
-  <body>
-    <header class="nav">
-      <a class="brand" href="/">Trading Mind<span>.</span></a>
 
-      <nav>
-        <a class="nav-link" href="#approach">Approach</a>
-        <a class="nav-link" href="#coaching">Coaching</a>
-        <a class="nav-course" href="/course">Free Course <span>↗</span></a>
-        <a class="nav-cta" href="#contact">Get in touch <span>↗</span></a>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Trading Mind home">
+        trading<span>mind</span><span class="brand-dot">.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#approach">Approach</a>
+        <a href="#coaching">Coaching</a>
+        <a class="nav-course" href="/course">Free course <span>↗</span></a>
+        <a class="nav-cta" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
+          Get in touch <span>↗</span>
+        </a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div class="eyebrow">
-          <span class="dot"></span>
-          ORGANIC INTELLIGENCE · TRADING
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> ORGANIC INTELLIGENCE · TRADING</p>
+
+          <h1>Trading puts your nervous system <em>under pressure.</em></h1>
+
+          <p class="hero-subtitle">Develop the capacity to meet it.</p>
+
+          <p class="hero-description">
+            One-to-one coaching for traders navigating uncertainty, stress and
+            the demands of high-performance decision-making.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-dark" href="#coaching">
+              Explore coaching <span>↗</span>
+            </a>
+            <a class="text-link" href="/course">Explore the free course <span>→</span></a>
+          </div>
         </div>
 
-        <h1>Trading puts your nervous system under pressure<span>.</span></h1>
-
-        <p class="intro">Develop the capacity to meet it.</p>
-
-        <p class="sub">
-          One-to-one coaching for traders navigating uncertainty, stress and
-          the demands of high-performance decision-making.
-        </p>
-
-        <a class="button" href="#coaching">
-          Explore coaching <span>↗</span>
-        </a>
-
-        <div class="hero-note">
-          <span>01 /</span> PERFORMANCE IS MORE THAN STRATEGY
+        <div class="hero-aside" aria-hidden="true">
+          <div class="aside-rule"></div>
+          <p class="aside-number">01 / 03</p>
+          <p class="aside-label">PERFORMANCE<br />IS MORE THAN STRATEGY</p>
+          <div class="aside-mark">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
         </div>
       </section>
 
-      <section class="section problem" id="approach">
-        <div class="problem-heading">
-          <p class="label">THE CHALLENGE</p>
+      <section class="intro-section">
+        <div class="section-index">01 <span>—</span> THE CHALLENGE</div>
+        <div class="intro-content">
           <h2>You can know exactly what to do — and still struggle to do it.</h2>
-        </div>
-
-        <div class="body-copy">
-          <p>
-            Trading asks a lot of you. Uncertainty, rapid decisions, volatility,
-            wins, losses and the constant temptation to act can create a level
-            of demand that is difficult to navigate.
-          </p>
-          <p>
-            More discipline, better rules and another strategy may not address
-            the whole problem. How you respond to pressure matters, too.
-          </p>
+          <div class="intro-body">
+            <p>
+              Trading asks a lot of you. Uncertainty, rapid decisions, volatility,
+              wins, losses and the constant temptation to act can create a level
+              of demand that is difficult to navigate.
+            </p>
+            <p>
+              More discipline, better rules and another strategy may not address
+              the whole problem. How you respond to pressure matters, too.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="section approach">
-        <p class="label">A DIFFERENT APPROACH</p>
-        <h2>Build capacity, not just control.</h2>
+      <section class="approach-section" id="approach">
+        <div class="section-index">02 <span>—</span> THE APPROACH</div>
+        <div class="section-heading">
+          <h2>Build capacity,<br /><em>not just control.</em></h2>
+          <p>
+            The aim isn't to eliminate difficult experiences. It's to develop a
+            greater capacity to meet them.
+          </p>
+        </div>
 
-        <div class="cards">
-          <article>
-            <span class="number">01</span>
+        <div class="principles">
+          <article class="principle">
+            <p class="card-number">01</p>
             <h3>Understand your responses</h3>
             <p>
               Explore how pressure, uncertainty and activation shape your
@@ -80,17 +107,17 @@ import BaseHead from '../components/BaseHead.astro';
             </p>
           </article>
 
-          <article>
-            <span class="number">02</span>
+          <article class="principle">
+            <p class="card-number">02</p>
             <h3>Develop greater capacity</h3>
             <p>
-              Build your ability to meet challenging experiences without
-              relying exclusively on suppression, avoidance or willpower.
+              Build your ability to meet challenging experiences without relying
+              exclusively on suppression, avoidance or willpower.
             </p>
           </article>
 
-          <article>
-            <span class="number">03</span>
+          <article class="principle">
+            <p class="card-number">03</p>
             <h3>Make room for more choice</h3>
             <p>
               Develop a more flexible relationship with pressure, so difficult
@@ -100,106 +127,482 @@ import BaseHead from '../components/BaseHead.astro';
         </div>
       </section>
 
-      <section class="section coaching" id="coaching">
-        <div class="coaching-inner">
-          <div>
-            <p class="label">ONE-TO-ONE COACHING</p>
-            <h2>Work with the person behind the trader.</h2>
+      <section class="coaching-section" id="coaching">
+        <div class="section-index">03 <span>—</span> ONE-TO-ONE COACHING</div>
+
+        <div class="coaching-grid">
+          <div class="coaching-heading">
+            <p class="eyebrow">WORK WITH THE PERSON BEHIND THE TRADER</p>
+            <h2>How you meet the pressure is part of the <em>performance.</em></h2>
           </div>
 
-          <div class="body-copy">
+          <div class="coaching-copy">
             <p>
               Organic Intelligence is a nervous-system-informed approach that
               emphasises orientation, connection and the development of capacity.
-              Rather than trying to force yourself into the right state, we work
-              with your experience as it unfolds.
             </p>
             <p>
-              Sessions are tailored to you and the demands you're navigating.
+              Rather than trying to force yourself into the right state, we work
+              with your experience as it unfolds. Sessions are tailored to you
+              and the demands you're navigating.
+            </p>
+            <p>
               The focus is on your relationship with pressure, not on providing
               trading signals, strategies or financial advice.
             </p>
-            <a class="text-link" href="#contact">Discuss working together ↗</a>
+
+            <a class="button button-dark" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
+              Reach out on X <span>↗</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="contact" id="contact">
-        <p class="label">START A CONVERSATION</p>
+      <section class="contact-section">
+        <p class="eyebrow">START A CONVERSATION</p>
         <h2>Interested in working together?</h2>
         <p>
           Get in touch to talk about what you're experiencing and whether
           one-to-one coaching could be a fit.
         </p>
-        <a
-          class="button button-light"
-          href="https://x.com/youngtilopa"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Reach out on X <span>↗</span>
+        <a class="button button-light" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
+          Get in touch <span>↗</span>
         </a>
       </section>
     </main>
 
-    <footer>
-      <a class="brand" href="/">Trading Mind<span>.</span></a>
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/">trading<span>mind</span><span class="brand-dot">.</span></a>
       <p>Organic Intelligence for Traders</p>
-      <span>© {new Date().getFullYear()}</span>
+      <p class="copyright">© {year} Trading Mind</p>
     </footer>
   </body>
 </html>
 
 <style>
-  :global(*) {
-    box-sizing: border-box;
+  :root {
+    color-scheme: light;
+    --paper: #f7f6f2;
+    --ink: #262822;
+    --muted: #77796f;
+    --olive: #858c70;
+    --line: #deded5;
+    --soft: #eeeee7;
   }
+
+  :global(*) { box-sizing: border-box; }
 
   :global(html) {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
   }
 
   :global(body) {
     margin: 0;
-    background: #f7f6f2;
-    color: #20221f;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
   }
 
-  :global(a),
-  :global(a:visited) {
+  :global(a), :global(a:visited) {
     color: inherit;
+    text-decoration: none;
   }
 
-  :global(a:hover) {
-    color: #727766;
+  :global(a:focus-visible) {
+    outline: 2px solid var(--olive);
+    outline-offset: 5px;
   }
 
-  .nav {
-    width: 100%;
-    max-width: 1160px;
-    min-height: 82px;
-    margin: 0 auto;
-    padding: 0 32px;
+  .site-header {
+    min-height: 86px;
+    padding: 0 7.2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 28px;
-    border-bottom: 1px solid #e5e3dc;
+    border-bottom: 1px solid var(--line);
   }
 
-  .brand,
-  .brand:visited {
-    color: #20221f;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -1.5px;
+  .brand {
+    display: inline-flex;
+    align-items: baseline;
     white-space: nowrap;
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -1.25px;
+    line-height: 1;
   }
 
-  .brand span,
-  .hero h1 span {
-    color: #8
+  .brand > span:first-child { font-weight: 400; }
+  .brand .brand-dot { color: var(--olive); font-weight: 700; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(17px, 2.6vw, 38px);
+  }
+
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #55574f;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 160ms ease, background 160ms ease;
+  }
+
+  .nav-links a:hover { color: var(--olive); }
+
+  .nav-links .nav-course { color: var(--ink); }
+
+  .nav-links .nav-cta {
+    padding: 10px 15px;
+    border: 1px solid #c9cabe;
+    border-radius: 2px;
+    color: var(--ink);
+  }
+
+  .nav-links .nav-cta:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
+  }
+
+  .hero {
+    min-height: 575px;
+    padding: 105px 7.2% 90px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    align-items: center;
+    gap: 8%;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-copy { max-width: 750px; }
+
+  .eyebrow {
+    margin: 0 0 26px;
+    color: var(--olive);
+    font-size: 10px;
+    font-weight: 650;
+    letter-spacing: 1.7px;
+    line-height: 1.6;
+  }
+
+  .eyebrow-line {
+    display: inline-block;
+    width: 23px;
+    height: 1px;
+    margin: 0 10px 3px 0;
+    background: var(--olive);
+  }
+
+  h1, h2, h3, p { margin-top: 0; }
+
+  h1 {
+    max-width: 760px;
+    margin-bottom: 22px;
+    font-size: clamp(43px, 6.2vw, 77px);
+    font-weight: 450;
+    letter-spacing: -4.4px;
+    line-height: 1.07;
+  }
+
+  h1 em, h2 em {
+    color: var(--olive);
+    font-style: normal;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 14px;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: -0.55px;
+  }
+
+  .hero-description {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 23px;
+  }
+
+  .button {
+    min-height: 47px;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    font-size: 12px;
+    font-weight: 550;
+    transition: background 160ms ease, color 160ms ease;
+  }
+
+  .button-dark, .button-dark:visited {
+    background: var(--ink);
+    color: #fff !important;
+  }
+
+  .button-dark:hover { background: #45483d; }
+
+  .text-link, .text-link:visited {
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 550;
+  }
+
+  .text-link span { margin-left: 5px; color: var(--olive); }
+
+  .hero-aside {
+    align-self: end;
+    padding-bottom: 15px;
+    color: var(--muted);
+  }
+
+  .aside-rule { width: 100%; height: 1px; margin-bottom: 15px; background: var(--line); }
+  .aside-number { margin-bottom: 40px; font-size: 10px; letter-spacing: 1.4px; }
+  .aside-label { font-size: 9px; font-weight: 600; letter-spacing: 1.4px; line-height: 1.9; }
+
+  .aside-mark {
+    height: 56px;
+    margin-top: 27px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .aside-mark span {
+    width: 5px;
+    border-radius: 5px;
+    background: #a7ab96;
+  }
+
+  .aside-mark span:nth-child(1) { height: 18px; }
+  .aside-mark span:nth-child(2) { height: 34px; }
+  .aside-mark span:nth-child(3) { height: 49px; background: var(--olive); }
+  .aside-mark span:nth-child(4) { height: 29px; }
+  .aside-mark span:nth-child(5) { height: 14px; }
+
+  .intro-section, .approach-section, .coaching-section {
+    padding: 92px 7.2%;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section-index {
+    margin-bottom: 42px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.45px;
+  }
+
+  .section-index span { margin: 0 7px; color: var(--olive); }
+
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 0.72fr;
+    gap: 12%;
+    align-items: start;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: clamp(32px, 4.2vw, 50px);
+    font-weight: 450;
+    letter-spacing: -2px;
+    line-height: 1.2;
+  }
+
+  .intro-body { padding-top: 5px; color: var(--muted); }
+  .intro-body p { margin-bottom: 18px; }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 54px;
+    display: grid;
+    grid-template-columns: 1fr 0.62fr;
+    gap: 9%;
+    align-items: end;
+  }
+
+  .section-heading > p {
+    margin-bottom: 5px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .principle {
+    min-height: 225px;
+    padding: 25px 28px 27px 0;
+  }
+
+  .principle + .principle {
+    padding-left: 28px;
+    border-left: 1px solid var(--line);
+  }
+
+  .card-number {
+    margin-bottom: 31px;
+    color: var(--olive);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .principle h3 {
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 550;
+    letter-spacing: -0.4px;
+  }
+
+  .principle > p:last-child {
+    margin-bottom: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.78fr;
+    gap: 13%;
+    align-items: start;
+  }
+
+  .coaching-heading .eyebrow { margin-bottom: 22px; }
+  .coaching-heading h2 { max-width: 520px; }
+  .coaching-copy { padding-top: 4px; color: var(--muted); }
+  .coaching-copy p { margin-bottom: 19px; }
+  .coaching-copy .button { margin-top: 12px; }
+
+  .contact-section {
+    padding: 88px 7.2% 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-section .eyebrow { margin-bottom: 19px; }
+  .contact-section h2 { font-size: clamp(30px, 4vw, 44px); }
+  .contact-section > p:not(.eyebrow) {
+    max-width: 480px;
+    margin: 17px 0 27px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .button-light, .button-light:visited {
+    border: 1px solid #c9cabe;
+    color: var(--ink) !important;
+  }
+
+  .button-light:hover { background: var(--soft); }
+
+  .site-footer {
+    min-height: 83px;
+    padding: 22px 7.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .footer-brand { font-size: 18px; }
+  .site-footer p { margin: 0; color: var(--muted); font-size: 11px; }
+
+  @media (min-width: 1500px) {
+    .site-header, .hero, .intro-section, .approach-section,
+    .coaching-section, .contact-section, .site-footer {
+      padding-left: max(7.2%, calc((100vw - 1240px) / 2));
+      padding-right: max(7.2%, calc((100vw - 1240px) / 2));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .site-header {
+      min-height: auto;
+      padding: 23px 6%;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 21px;
+    }
+
+    .nav-links {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 12px 21px;
+    }
+
+    .nav-links a { font-size: 12px; }
+    .nav-links .nav-cta { padding: 7px 10px; }
+
+    .hero {
+      min-height: auto;
+      padding: 76px 6% 66px;
+      grid-template-columns: 1fr;
+      gap: 43px;
+    }
+
+    h1 { font-size: clamp(43px, 10vw, 65px); letter-spacing: -2.8px; }
+    .hero-aside { display: none; }
+
+    .intro-section, .approach-section, .coaching-section {
+      padding: 66px 6%;
+    }
+
+    .section-index { margin-bottom: 29px; }
+
+    .intro-content, .section-heading, .coaching-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .section-heading { margin-bottom: 36px; }
+
+    .principles { grid-template-columns: 1fr; }
+    .principle, .principle + .principle {
+      min-height: auto;
+      padding: 23px 0;
+      border-left: 0;
+    }
+
+    .principle + .principle { border-top: 1px solid var(--line); }
+    .card-number { margin-bottom: 17px; }
+
+    .contact-section { padding: 70px 6%; }
+    .site-footer { padding: 24px 6%; flex-wrap: wrap; }
+    .site-footer p { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) { scroll-behavior: auto; }
+    :global(*), :global(*::before), :global(*::after) { transition: none !important; }
+  }
+</style>
