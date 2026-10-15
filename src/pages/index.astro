@@ -13,11 +13,12 @@ import BaseHead from '../components/BaseHead.astro';
   <body>
     <header class="nav">
       <a class="brand" href="/">Trading Mind<span>.</span></a>
+
       <nav>
-        <a href="#approach">Approach</a>
-        <a href="#coaching">Coaching</a>
-        <a href="/course">Free Course ↗</a>
-        <a href="#contact" class="nav-cta">Get in touch ↗</a>
+        <a class="nav-link" href="#approach">Approach</a>
+        <a class="nav-link" href="#coaching">Coaching</a>
+        <a class="nav-course" href="/course">Free Course <span>↗</span></a>
+        <a class="nav-cta" href="#contact">Get in touch <span>↗</span></a>
       </nav>
     </header>
 
@@ -47,7 +48,7 @@ import BaseHead from '../components/BaseHead.astro';
       </section>
 
       <section class="section problem" id="approach">
-        <div class="section-heading">
+        <div class="problem-heading">
           <p class="label">THE CHALLENGE</p>
           <h2>You can know exactly what to do — and still struggle to do it.</h2>
         </div>
@@ -143,4 +144,62 @@ import BaseHead from '../components/BaseHead.astro';
 
     <footer>
       <a class="brand" href="/">Trading Mind<span>.</span></a>
-     
+      <p>Organic Intelligence for Traders</p>
+      <span>© {new Date().getFullYear()}</span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    margin: 0;
+    background: #f7f6f2;
+    color: #20221f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  :global(a),
+  :global(a:visited) {
+    color: inherit;
+  }
+
+  :global(a:hover) {
+    color: #727766;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 1160px;
+    min-height: 82px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    border-bottom: 1px solid #e5e3dc;
+  }
+
+  .brand,
+  .brand:visited {
+    color: #20221f;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
+  }
+
+  .brand span,
+  .hero h1 span {
+    color: #8
