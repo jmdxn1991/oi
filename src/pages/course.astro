@@ -1,307 +1,453 @@
 
 ---
+const year = new Date().getFullYear();
+
 const lessons = [
   {
-    number: "01",
     title: "Market Microstructure and Liquidity Basics",
+    description: "Understand the foundations of market microstructure and liquidity.",
     id: "ece8e22d4c8bab1080123059337a5efd",
   },
   {
-    number: "02",
     title: "Identifying Key Structures (Flags and Flag Limits)",
+    description: "Explore flags, flag limits and the structures traders watch.",
     id: "7195a57d5c24c8c7884cde1ad3aba05e",
   },
   {
-    number: "03",
     title: "Market Structure (Engulf and FTR)",
+    description: "An introduction to engulfing structures and failure to return.",
     id: "e0bdd98b82052e3e13fa1407c672e1bc",
   },
   {
-    number: "04",
     title: "Anticipating Volatility (Liquidity Gaps and Compression)",
+    description: "Look at liquidity gaps, compression and potential changes in volatility.",
     id: "90a1f82e53168f5ca2f47c85b90ac971",
   },
   {
-    number: "05",
     title: "Navigating Scale (Trading Flow and Managing Expectations)",
+    description: "Consider trading flow across scales and managing expectations.",
     id: "799078cd2ca73d29cbb9b3901cb3971a",
   },
   {
-    number: "06",
     title: "Volume Profile",
+    description: "Explore volume profile and how it can inform market analysis.",
     id: "4075efd8f38c2ff75d860bd2f2202ea6",
   },
   {
-    number: "07",
     title: "False Breaks",
+    description: "Examine false breaks and how they appear in market structure.",
     id: "48fb22e7eecdea58ba7ac2f24b2dd950",
   },
   {
-    number: "08",
     title: "Orderflow Dynamics and the Footprint",
+    description: "Explore orderflow dynamics and reading the footprint.",
     id: "868cdd5af104fafc12705f9e01671186",
   },
   {
-    number: "09",
     title: "Psychology",
+    description: "Consider the psychological side of trading and decision-making.",
     id: "a4ad8289e0b0997dc64dbc48f7ce38bc",
   },
 ];
 
 const bonus = {
-  title: "Q&A",
+  title: "Final Q&A",
+  description: "A bonus question-and-answer session to close out the course.",
   id: "f2b36697fc2208c7b44b2760d3a9aab0",
 };
 ---
 
-<svelte:head>
-  <title>Free Trading Course | Young Tilopa</title>
-  <meta
-    name="description"
-    content="A free video course covering market structure, liquidity, volatility, order flow and trading psychology."
-  />
-</svelte:head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A free trading course covering market structure, liquidity, volatility, orderflow and psychology."
+    />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>Free Trading Course — Trading Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="course-page">
-  <header class="topbar">
-    <a class="wordmark" href="/">YOUNG TILOPA<span>.</span></a>
-    <a class="nav-link" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-      Get in touch ↗
-    </a>
-  </header>
-
-  <main>
-    <section class="intro">
-      <p class="eyebrow">FREE VIDEO COURSE · 10 VIDEOS</p>
-      <h1>Understand the market.<br /><span>Trade with clarity.</span></h1>
-      <p class="description">
-        A practical video series exploring market structure, liquidity,
-        volatility, order flow and psychology. Work through the lessons at
-        your own pace.
-      </p>
-      <a class="start-link" href="#lesson-01">Start learning <span>↓</span></a>
-      <p class="note">9 lessons + a final Q&A · Free, open access</p>
-    </section>
-
-    <section class="lessons">
-      <div class="section-heading">
-        <p class="eyebrow">THE CURRICULUM</p>
-        <p class="lesson-count">09 LESSONS + Q&A</p>
-      </div>
-
-      {lessons.map((lesson) => (
-        <article class="lesson" id={`lesson-${lesson.number}`}>
-          <div class="lesson-heading">
-            <span class="lesson-number">{lesson.number}</span>
-            <h2>{lesson.title}</h2>
-          </div>
-          <div class="video-frame">
-            <iframe
-              src={`https://iframe.videodelivery.net/${lesson.id}`}
-              title={lesson.title}
-              loading="lazy"
-              allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </article>
-      ))}
-
-      <article class="lesson bonus" id="lesson-qa">
-        <div class="lesson-heading">
-          <span class="lesson-number">↳</span>
-          <h2>Final Q&A</h2>
-        </div>
-        <div class="video-frame">
-          <iframe
-            src={`https://iframe.videodelivery.net/${bonus.id}`}
-            title="Final Q&A"
-            loading="lazy"
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </article>
-    </section>
-
-    <section class="coaching">
-      <p class="eyebrow">GO FURTHER</p>
-      <h2>Your performance is about more than strategy.</h2>
-      <p>
-        I work with traders on nervous-system capacity, helping them navigate
-        the cognitive and emotional demands of trading.
-      </p>
-      <a href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-        Enquire about 1:1 coaching ↗
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Trading Mind home">
+        trading<span>mind</span><span class="brand-dot">.</span>
       </a>
-    </section>
-  </main>
 
-  <footer>
-    <a class="wordmark" href="/">YOUNG TILOPA<span>.</span></a>
-    <p>Free educational content. Not financial advice.</p>
-  </footer>
-</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/#approach">Approach</a>
+        <a href="/#coaching">Coaching</a>
+        <a class="nav-course active" href="/course">Free course</a>
+        <a class="nav-cta" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
+          Get in touch <span>↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="course-hero">
+        <p class="eyebrow"><span class="eyebrow-line"></span> TRADING EDUCATION · FREE COURSE</p>
+        <h1>Build your understanding of the <em>markets.</em></h1>
+        <p class="course-intro">
+          A collection of lessons exploring market structure, liquidity,
+          volatility, orderflow and trading psychology. Work through the
+          sessions at your own pace.
+        </p>
+        <div class="course-meta">
+          <span><span class="meta-dot"></span> 9 lessons + bonus Q&amp;A</span>
+          <span>Free access</span>
+          <span>Watch at your own pace</span>
+        </div>
+      </section>
+
+      <section class="lessons-section">
+        <div class="lessons-heading">
+          <div>
+            <p class="section-index">01 <span>—</span> THE COURSE</p>
+            <h2>Course lessons</h2>
+          </div>
+          <p class="lessons-note">Start at the beginning or jump to the topic you're interested in.</p>
+        </div>
+
+        <div class="lesson-list">
+          {lessons.map((lesson, index) => (
+            <article class="lesson" id={`lesson-${index + 1}`}>
+              <div class="lesson-info">
+                <p class="lesson-number">{String(index + 1).padStart(2, "0")}</p>
+                <div>
+                  <h3>{lesson.title}</h3>
+                  <p>{lesson.description}</p>
+                </div>
+              </div>
+              <details class="lesson-details">
+                <summary><span class="watch-label">Watch lesson</span><span class="plus">+</span></summary>
+                <div class="video-wrap">
+                  <iframe
+                    src={`https://iframe.videodelivery.net/${lesson.id}`}
+                    title={lesson.title}
+                    loading="lazy"
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </details>
+            </article>
+          ))}
+        </div>
+
+        <article class="lesson bonus-lesson" id="bonus">
+          <div class="lesson-info">
+            <p class="lesson-number">+</p>
+            <div>
+              <p class="bonus-label">BONUS SESSION</p>
+              <h3>{bonus.title}</h3>
+              <p>{bonus.description}</p>
+            </div>
+          </div>
+          <details class="lesson-details">
+            <summary><span class="watch-label">Watch session</span><span class="plus">+</span></summary>
+            <div class="video-wrap">
+              <iframe
+                src={`https://iframe.videodelivery.net/${bonus.id}`}
+                title={bonus.title}
+                loading="lazy"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </details>
+        </article>
+      </section>
+
+      <section class="course-cta">
+        <p class="eyebrow">GO A LITTLE DEEPER</p>
+        <h2>The person behind the trader matters, too.</h2>
+        <p>
+          Alongside market knowledge, explore how you relate to pressure,
+          uncertainty and the demands of trading.
+        </p>
+        <a class="button button-dark" href="/#coaching">Explore one-to-one coaching <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="/">trading<span>mind</span><span class="brand-dot">.</span></a>
+      <p>Organic Intelligence for Traders</p>
+      <p class="copyright">© {year} Trading Mind</p>
+    </footer>
+  </body>
+</html>
 
 <style>
-  :global(*) {
-    box-sizing: border-box;
+  :root {
+    color-scheme: light;
+    --paper: #f7f6f2;
+    --ink: #262822;
+    --muted: #77796f;
+    --olive: #858c70;
+    --line: #deded5;
+    --soft: #eeeee7;
   }
+
+  :global(*) { box-sizing: border-box; }
 
   :global(html) {
     scroll-behavior: smooth;
-    background: #f8f7f4;
+    scroll-padding-top: 100px;
   }
 
   :global(body) {
     margin: 0;
-    color: #22221f;
-    font-family: Arial, Helvetica, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
   }
 
-  :global(a) {
-    color: inherit;
-  }
+  :global(a), :global(a:visited) { color: inherit; text-decoration: none; }
+  :global(a:focus-visible) { outline: 2px solid var(--olive); outline-offset: 5px; }
 
-  .course-page {
-    --muted: #77766f;
-    --line: #deddd6;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 7%;
-  }
-
-  .topbar,
-  footer {
+  .site-header {
+    min-height: 86px;
+    padding: 0 7.2%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    min-height: 78px;
+    justify-content: space-between;
+    gap: 28px;
     border-bottom: 1px solid var(--line);
   }
 
-  .wordmark {
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+  .brand {
+    display: inline-flex;
+    align-items: baseline;
+    white-space: nowrap;
+    font-size: 22px;
+    font-weight: 650;
+    letter-spacing: -1.25px;
+    line-height: 1;
   }
 
-  .wordmark span {
-    color: #a05b3c;
+  .brand > span:first-child { font-weight: 400; }
+  .brand .brand-dot { color: var(--olive); font-weight: 700; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(17px, 2.6vw, 38px);
   }
 
-  .nav-link {
-    font-size: 13px;
-    text-decoration: none;
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #55574f;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 160ms ease, background 160ms ease;
   }
 
-  .intro {
-    max-width: 760px;
-    padding: 100px 0 90px;
+  .nav-links a:hover, .nav-links .active { color: var(--olive); }
+  .nav-links .nav-course { color: var(--ink); }
+  .nav-links .nav-cta {
+    padding: 10px 15px;
+    border: 1px solid #c9cabe;
+    border-radius: 2px;
+    color: var(--ink);
+  }
+
+  .nav-links .nav-cta:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--paper);
   }
 
   .eyebrow {
-    color: var(--muted);
+    margin: 0 0 25px;
+    color: var(--olive);
     font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-weight: 650;
+    letter-spacing: 1.7px;
     line-height: 1.6;
   }
 
+  .eyebrow-line {
+    display: inline-block;
+    width: 23px;
+    height: 1px;
+    margin: 0 10px 3px 0;
+    background: var(--olive);
+  }
+
+  h1, h2, h3, p { margin-top: 0; }
+
   h1 {
-    margin: 25px 0;
-    font-size: clamp(42px, 6.5vw, 76px);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -3.5px;
+    max-width: 850px;
+    margin-bottom: 25px;
+    font-size: clamp(44px, 6.5vw, 78px);
+    font-weight: 450;
+    letter-spacing: -4px;
+    line-height: 1.07;
   }
 
-  h1 span {
-    color: #85847c;
+  h1 em { color: var(--olive); font-style: normal; }
+
+  .course-hero {
+    padding: 100px 7.2% 70px;
+    border-bottom: 1px solid var(--line);
   }
 
-  .description {
-    max-width: 540px;
-    color: #64635d;
-    font-size: 17px;
-    line-height: 1.8;
+  .course-intro {
+    max-width: 630px;
+    margin-bottom: 32px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.95;
   }
 
-  .start-link {
-    display: inline-flex;
-    gap: 25px;
-    align-items: center;
-    margin-top: 25px;
-    padding: 15px 20px;
-    background: #252520;
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
+  .course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px 28px;
+    color: var(--muted);
+    font-size: 11px;
   }
 
-  .note {
-    margin-top: 20px;
+  .meta-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 8px 1px 0;
+    border-radius: 50%;
+    background: var(--olive);
+  }
+
+  .lessons-section { padding: 78px 7.2% 90px; }
+
+  .lessons-heading {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 35px;
+  }
+
+  .section-index {
+    margin-bottom: 14px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.45px;
+  }
+
+  .section-index span { margin: 0 7px; color: var(--olive); }
+
+  h2 {
+    margin-bottom: 0;
+    font-size: clamp(30px, 4vw, 43px);
+    font-weight: 450;
+    letter-spacing: -1.7px;
+    line-height: 1.2;
+  }
+
+  .lessons-note {
+    max-width: 300px;
+    margin-bottom: 4px;
     color: var(--muted);
     font-size: 12px;
   }
 
-  .lessons {
-    border-top: 1px solid var(--line);
-  }
-
-  .section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 22px 0;
-  }
-
-  .lesson-count {
-    color: var(--muted);
-    font-size: 10px;
-    letter-spacing: 1px;
-  }
+  .lesson-list { border-top: 1px solid var(--line); }
 
   .lesson {
-    padding: 28px 0 42px;
-    border-top: 1px solid var(--line);
-    scroll-margin-top: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--line);
   }
 
-  .lesson-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
-    margin-bottom: 20px;
+  .lesson-info {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
   }
 
   .lesson-number {
-    flex: 0 0 30px;
+    margin: 3px 0 0;
+    color: var(--olive);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .lesson h3 {
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 550;
+    letter-spacing: -0.35px;
+    line-height: 1.5;
+  }
+
+  .lesson-info div > p:last-child {
+    margin-bottom: 0;
     color: var(--muted);
     font-size: 12px;
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(19px, 2.5vw, 26px);
-    font-weight: 500;
-    letter-spacing: -0.7px;
-    line-height: 1.4;
+  .lesson-details { margin: 15px 0 0 57px; }
+
+  .lesson-details summary {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    list-style: none;
   }
 
-  .video-frame {
+  .lesson-details summary::-webkit-details-marker { display: none; }
+
+  .watch-label {
+    color: var(--ink);
+    font-size: 11px;
+    font-weight: 550;
+  }
+
+  .plus {
+    width: 23px;
+    height: 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d2d3c8;
+    border-radius: 50%;
+    color: var(--olive);
+    font-size: 15px;
+    line-height: 1;
+    transition: transform 160ms ease;
+  }
+
+  details[open] .plus { transform: rotate(45deg); }
+
+  .video-wrap {
     position: relative;
     width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
     overflow: hidden;
+    background: #e8e8e0;
     aspect-ratio: 16 / 9;
-    background: #e5e3dd;
   }
 
-  .video-frame iframe {
+  .video-wrap iframe {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -309,87 +455,114 @@ const bonus = {
     border: 0;
   }
 
-  .bonus {
-    margin-bottom: 20px;
+  .bonus-lesson {
+    margin-top: 24px;
+    padding: 28px;
+    background: var(--soft);
+    border: 0;
   }
 
-  .coaching {
-    margin: 55px 0 75px;
-    padding: 45px;
-    background: #eeece6;
+  .bonus-label {
+    margin-bottom: 7px !important;
+    color: var(--olive) !important;
+    font-size: 9px !important;
+    font-weight: 650;
+    letter-spacing: 1.5px;
   }
 
-  .coaching h2 {
-    max-width: 560px;
-    margin: 18px 0;
-    font-size: clamp(27px, 4vw, 42px);
-    line-height: 1.2;
-    letter-spacing: -1.5px;
-  }
+  .bonus-lesson .lesson-details { margin-left: 57px; }
 
-  .coaching > p:not(.eyebrow) {
-    max-width: 540px;
-    color: #64635d;
-    line-height: 1.8;
-  }
-
-  .coaching > a {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 13px;
-    font-weight: 700;
-    text-underline-offset: 5px;
-  }
-
-  footer {
-    min-height: 90px;
+  .course-cta {
+    padding: 78px 7.2% 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border-top: 1px solid var(--line);
-    border-bottom: 0;
   }
 
-  footer p {
+  .course-cta .eyebrow { margin-bottom: 18px; }
+
+  .course-cta h2 {
+    max-width: 660px;
+    font-size: clamp(32px, 4.5vw, 48px);
+  }
+
+  .course-cta > p:not(.eyebrow) {
+    max-width: 570px;
+    margin: 18px 0 25px;
     color: var(--muted);
-    font-size: 11px;
-    text-align: right;
+    font-size: 14px;
   }
 
-  @media (max-width: 600px) {
-    .course-page {
-      padding: 0 6%;
-    }
+  .button, .button:visited {
+    min-height: 47px;
+    padding: 0 19px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: var(--ink);
+    color: #fff !important;
+    font-size: 12px;
+    font-weight: 550;
+    transition: background 160ms ease;
+  }
 
-    .intro {
-      padding: 75px 0 65px;
-    }
+  .button:hover { background: #45483d; }
 
-    h1 {
-      letter-spacing: -2px;
-    }
+  .site-footer {
+    min-height: 83px;
+    padding: 22px 7.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-top: 1px solid var(--line);
+  }
 
-    .description {
-      font-size: 15px;
-    }
+  .footer-brand { font-size: 18px; }
+  .site-footer p { margin: 0; color: var(--muted); font-size: 11px; }
 
-    .lesson-heading {
-      gap: 10px;
+  @media (min-width: 1500px) {
+    .site-header, .course-hero, .lessons-section, .course-cta, .site-footer {
+      padding-left: max(7.2%, calc((100vw - 1240px) / 2));
+      padding-right: max(7.2%, calc((100vw - 1240px) / 2));
     }
+  }
 
-    .lesson-number {
-      flex-basis: 24px;
-    }
-
-    .coaching {
-      padding: 28px 22px;
-    }
-
-    footer {
+  @media (max-width: 760px) {
+    .site-header {
+      min-height: auto;
+      padding: 23px 6%;
       align-items: flex-start;
-      padding: 25px 0;
+      flex-direction: column;
+      gap: 21px;
     }
 
-    footer p {
-      max-width: 150px;
-      line-height: 1.6;
+    .nav-links {
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 12px 21px;
     }
+
+    .nav-links a { font-size: 12px; }
+    .nav-links .nav-cta { padding: 7px 10px; }
+
+    .course-hero { padding: 72px 6% 52px; }
+    h1 { font-size: clamp(43px, 10vw, 65px); letter-spacing: -2.8px; }
+    .lessons-section { padding: 58px 6% 65px; }
+    .lessons-heading { align-items: flex-start; flex-direction: column; gap: 13px; }
+    .lesson-info { grid-template-columns: 31px minmax(0, 1fr); gap: 9px; }
+    .lesson-details, .bonus-lesson .lesson-details { margin-left: 40px; }
+    .bonus-lesson { padding: 20px 15px; }
+    .course-cta { padding: 62px 6% 70px; }
+    .site-footer { padding: 24px 6%; flex-wrap: wrap; }
+    .site-footer p { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) { scroll-behavior: auto; }
+    :global(*), :global(*::before), :global(*::after) { transition: none !important; }
   }
 </style>
