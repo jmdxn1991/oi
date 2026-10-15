@@ -77,23 +77,16 @@ const bonus = {
 
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Trading Mind home">
-        trading<span>mind</span><span class="brand-dot">.</span>
-      </a>
+      <a class="brand" href="/" aria-label="Trading Mind home">trading<span>mind</span></a>
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="/#approach">Approach</a>
-        <a href="/#coaching">Coaching</a>
-        <a class="nav-course active" href="/course">Free course</a>
-        <a class="nav-cta" href="https://x.com/youngtilopa" target="_blank" rel="noreferrer">
-          Get in touch <span>↗</span>
-        </a>
+        <a class="nav-course" href="/course">Free course</a>
       </nav>
     </header>
 
     <main>
       <section class="course-hero">
-        <p class="eyebrow"><span class="eyebrow-line"></span> TRADING EDUCATION · FREE COURSE</p>
         <h1>Build your understanding of the <em>markets.</em></h1>
         <p class="course-intro">
           A collection of lessons exploring market structure, liquidity,
@@ -109,10 +102,7 @@ const bonus = {
 
       <section class="lessons-section">
         <div class="lessons-heading">
-          <div>
-            <p class="section-index">01 <span>—</span> THE COURSE</p>
-            <h2>Course lessons</h2>
-          </div>
+          <h2>Course lessons</h2>
           <p class="lessons-note">Start at the beginning or jump to the topic you're interested in.</p>
         </div>
 
@@ -127,7 +117,10 @@ const bonus = {
                 </div>
               </div>
               <details class="lesson-details">
-                <summary><span class="watch-label">Watch lesson</span><span class="plus">+</span></summary>
+                <summary>
+                  <span class="watch-label">Watch lesson</span>
+                  <span class="plus">+</span>
+                </summary>
                 <div class="video-wrap">
                   <iframe
                     src={`https://iframe.videodelivery.net/${lesson.id}`}
@@ -146,13 +139,15 @@ const bonus = {
           <div class="lesson-info">
             <p class="lesson-number">+</p>
             <div>
-              <p class="bonus-label">BONUS SESSION</p>
               <h3>{bonus.title}</h3>
               <p>{bonus.description}</p>
             </div>
           </div>
           <details class="lesson-details">
-            <summary><span class="watch-label">Watch session</span><span class="plus">+</span></summary>
+            <summary>
+              <span class="watch-label">Watch session</span>
+              <span class="plus">+</span>
+            </summary>
             <div class="video-wrap">
               <iframe
                 src={`https://iframe.videodelivery.net/${bonus.id}`}
@@ -167,19 +162,17 @@ const bonus = {
       </section>
 
       <section class="course-cta">
-        <p class="eyebrow">GO A LITTLE DEEPER</p>
         <h2>The person behind the trader matters, too.</h2>
         <p>
           Alongside market knowledge, explore how you relate to pressure,
           uncertainty and the demands of trading.
         </p>
-        <a class="button button-dark" href="/#coaching">Explore one-to-one coaching <span>↗</span></a>
+        <a class="button button-dark" href="/#contact">Enquire about 1:1 coaching</a>
       </section>
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="/">trading<span>mind</span><span class="brand-dot">.</span></a>
-      <p>Organic Intelligence for Traders</p>
+      <a class="brand footer-brand" href="/">trading<span>mind</span></a>
       <p class="copyright">© {year} Trading Mind</p>
     </footer>
   </body>
@@ -236,8 +229,7 @@ const bonus = {
     line-height: 1;
   }
 
-  .brand > span:first-child { font-weight: 400; }
-  .brand .brand-dot { color: var(--olive); font-weight: 700; }
+  .brand > span { font-weight: 400; }
 
   .nav-links {
     display: flex;
@@ -249,45 +241,14 @@ const bonus = {
   .nav-links a {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
     color: #55574f;
     font-size: 12px;
     font-weight: 500;
     white-space: nowrap;
-    transition: color 160ms ease, background 160ms ease;
+    transition: color 160ms ease;
   }
 
-  .nav-links a:hover, .nav-links .active { color: var(--olive); }
-  .nav-links .nav-course { color: var(--ink); }
-  .nav-links .nav-cta {
-    padding: 10px 15px;
-    border: 1px solid #c9cabe;
-    border-radius: 2px;
-    color: var(--ink);
-  }
-
-  .nav-links .nav-cta:hover {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--paper);
-  }
-
-  .eyebrow {
-    margin: 0 0 25px;
-    color: var(--olive);
-    font-size: 10px;
-    font-weight: 650;
-    letter-spacing: 1.7px;
-    line-height: 1.6;
-  }
-
-  .eyebrow-line {
-    display: inline-block;
-    width: 23px;
-    height: 1px;
-    margin: 0 10px 3px 0;
-    background: var(--olive);
-  }
+  .nav-links a:hover, .nav-links .nav-course { color: var(--olive); }
 
   h1, h2, h3, p { margin-top: 0; }
 
@@ -341,16 +302,6 @@ const bonus = {
     align-items: end;
     gap: 35px;
   }
-
-  .section-index {
-    margin-bottom: 14px;
-    color: var(--muted);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 1.45px;
-  }
-
-  .section-index span { margin: 0 7px; color: var(--olive); }
 
   h2 {
     margin-bottom: 0;
@@ -462,14 +413,6 @@ const bonus = {
     border: 0;
   }
 
-  .bonus-label {
-    margin-bottom: 7px !important;
-    color: var(--olive) !important;
-    font-size: 9px !important;
-    font-weight: 650;
-    letter-spacing: 1.5px;
-  }
-
   .bonus-lesson .lesson-details { margin-left: 57px; }
 
   .course-cta {
@@ -480,14 +423,12 @@ const bonus = {
     border-top: 1px solid var(--line);
   }
 
-  .course-cta .eyebrow { margin-bottom: 18px; }
-
   .course-cta h2 {
     max-width: 660px;
     font-size: clamp(32px, 4.5vw, 48px);
   }
 
-  .course-cta > p:not(.eyebrow) {
+  .course-cta > p {
     max-width: 570px;
     margin: 18px 0 25px;
     color: var(--muted);
@@ -500,7 +441,6 @@ const bonus = {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
     background: var(--ink);
     color: #fff !important;
     font-size: 12px;
@@ -547,7 +487,6 @@ const bonus = {
     }
 
     .nav-links a { font-size: 12px; }
-    .nav-links .nav-cta { padding: 7px 10px; }
 
     .course-hero { padding: 72px 6% 52px; }
     h1 { font-size: clamp(43px, 10vw, 65px); letter-spacing: -2.8px; }
@@ -557,8 +496,7 @@ const bonus = {
     .lesson-details, .bonus-lesson .lesson-details { margin-left: 40px; }
     .bonus-lesson { padding: 20px 15px; }
     .course-cta { padding: 62px 6% 70px; }
-    .site-footer { padding: 24px 6%; flex-wrap: wrap; }
-    .site-footer p { width: 100%; }
+    .site-footer { padding: 24px 6%; }
   }
 
   @media (prefers-reduced-motion: reduce) {
