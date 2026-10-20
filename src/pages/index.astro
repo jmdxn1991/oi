@@ -47,39 +47,44 @@ const year = new Date().getFullYear();
         </div>
       </section>
 
-      <section class="text-section" id="approach">
-        <div class="text-content">
-          <p class="text-lead">
-            Trading asks a lot of the person behind the screen.
-          </p>
+      
+          
+<section class="text-section" id="approach">
+  <div class="text-content">
+    <div class="text-heading">
+      <h2>The person behind the trader.</h2>
+    </div>
 
-          <p>
-            You can have a sound strategy, understand the markets and know
-            exactly what you should do — yet find yourself acting impulsively,
-            hesitating, overtrading or struggling to step away.
-          </p>
+    <div class="text-body">
+      <p class="text-lead">
+        Trading places extraordinary demands on your ability to perform well
+        under pressure.
+      </p>
 
-          <p>
-            These aren't always problems that can be solved with more knowledge
-            or stricter discipline. Under pressure, our capacity to think
-            clearly, tolerate uncertainty and respond flexibly can change.
-          </p>
+      <p>
+        It doesn't matter how good your strategy is if you can't execute it.
+        If you find yourself overtrading, caught in addictive patterns, burning
+        out or becoming overwhelmed by decisions, capacity is the constraint.
+      </p>
 
-          <p>
-            My work draws on <strong>Organic Intelligence®</strong> to help
-            traders develop that capacity. Rather than focusing solely on
-            controlling behaviour or managing symptoms, we work with the
-            underlying patterns shaping how you respond to pressure.
-          </p>
+      <p>
+        Rather than focusing on controlling emotions or correcting unwanted
+        behaviour through willpower or discipline, I work with the underlying
+        nervous system patterns impacting your ability to perform well under
+        pressure.
+      </p>
 
-          <p>
-            The aim is to create more room between what happens in the market
-            and how you respond — so that your decisions can reflect your
-            understanding, rather than being driven by the need to escape
-            discomfort.
-          </p>
-        </div>
-      </section>
+      <p>
+        By drawing on your natural ability to adapt and self-organise, and by
+        following what is interesting or enjoyable, we work together to
+        increase your general wellbeing, develop greater flexibility under
+        pressure and more freedom in your decisions, become more resilient,
+        and ultimately build a more sustainable relationship with trading.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       <section class="contact-section" id="contact">
         <h2>Interested in working together?</h2>
@@ -265,41 +270,77 @@ const year = new Date().getFullYear();
 
   /* Single text block replacing the former intro and approach sections */
 
+  
+.text-section {
+  padding: 100px 7.2% 110px;
+  border-bottom: 1px solid var(--line);
+}
+
+.text-content {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 10%;
+  align-items: start;
+}
+
+.text-heading h2 {
+  max-width: 440px;
+  margin: 0;
+  font-size: clamp(34px, 4.2vw, 52px);
+  font-weight: 450;
+  letter-spacing: -2px;
+  line-height: 1.15;
+}
+
+.text-body {
+  padding-top: 4px;
+}
+
+.text-body p {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.text-body p:last-child {
+  margin-bottom: 0;
+}
+
+.text-body .text-lead {
+  margin-bottom: 25px;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
   .text-section {
-    padding: 100px 7.2% 110px;
-    border-bottom: 1px solid var(--line);
+    padding: 68px 6% 76px;
   }
 
   .text-content {
-    max-width: 760px;
-    margin: 0 auto;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .text-content p {
-    margin-bottom: 24px;
-    color: var(--muted);
-    font-size: 16px;
-    line-height: 2;
+  .text-heading h2 {
+    max-width: 500px;
+    font-size: clamp(34px, 8vw, 42px);
+    letter-spacing: -1.4px;
   }
 
-  .text-content p:last-child {
-    margin-bottom: 0;
+  .text-body p {
+    font-size: 15px;
+    line-height: 1.9;
   }
 
-  .text-content .text-lead {
-    max-width: 680px;
-    margin-bottom: 32px;
-    color: var(--ink);
-    font-size: clamp(29px, 3.5vw, 42px);
-    font-weight: 450;
-    letter-spacing: -1.5px;
-    line-height: 1.25;
+  .text-body .text-lead {
+    font-size: 18px;
   }
-
-  .text-content strong {
-    color: var(--ink);
-    font-weight: 550;
-  }
+}
 
   .contact-section {
     padding: 88px 7.2% 96px;
