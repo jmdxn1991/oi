@@ -13,8 +13,13 @@ const year = new Date().getFullYear();
     />
     <meta name="theme-color" content="#f7f6f2" />
     <title>Trading Mind — Coaching for Traders</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
       rel="stylesheet"
@@ -24,7 +29,9 @@ const year = new Date().getFullYear();
   <body>
     <div class="first-screen">
       <header class="site-header">
-        <a class="brand" href="/" aria-label="Trading Mind home">trading<span>mind</span></a>
+        <a class="brand" href="/" aria-label="Trading Mind home">
+          trading<span>mind</span>
+        </a>
 
         <nav class="nav-links" aria-label="Main navigation">
           <a href="/">Coaching</a>
@@ -35,58 +42,61 @@ const year = new Date().getFullYear();
 
       <section class="hero">
         <div class="hero-copy">
-          <h1>Develop your <em>nervous system capacity</em></h1>
+          <h1>
+            Develop your <em>nervous system capacity</em>
+          </h1>
 
           <p class="hero-description">
-            One-to-one coaching for traders who want to improve performance and manage the stress of trading
+            One-to-one coaching for traders who want to improve performance
+            and manage the stress of trading.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-dark" href="#contact">Explore coaching</a>
+            <a class="button button-dark" href="#contact">
+              Explore coaching
+            </a>
           </div>
         </div>
       </section>
     </div>
 
     <main>
-      
+      <section class="editorial-intro" id="approach">
+        <div class="editorial-intro__inner">
+          <div class="intro-grid">
+            <div class="intro-card">
+              <h2>The challenge</h2>
 
-<section class="editorial-intro" id="approach">
-  <div class="editorial-intro__inner">
-    <div class="intro-grid">
-      <div class="intro-card">
-        <h2>The challenge</h2>
-        <p>
-          Trading asks a lot of you psychologically. Uncertainty, losses,
-          risk and missed opportunities can place sustained demands on your
-          ability to think clearly and act with intention.
-        </p>
-      </div>
+              <p>
+                Uncertainty, risk and missed opportunities can place sustained demands on your ability to think clearly. 
+Most people focus on strategy, but strategy is only as good as your ability to execute it. 
+If you find yourself overtrading, becoming burnt out, overwhelmed by decisions or caught in cycles of addiction, nervous system capacity is the constraint.
+              </p>
+            </div>
 
-      <div class="intro-card">
-        <h2>A different approach</h2>
-        <p>
-          Knowing what to do and being able to do it under pressure are
-          two different things. Rather than focusing only on strategy,
-          we work with the person navigating the demands of trading.
-        </p>
-      </div>
+            <div class="intro-card">
+              <h2>A different approach</h2>
 
-      <div class="intro-card">
-        <h2>How it works</h2>
-        <p>
-          Through one-to-one coaching informed by Organic Intelligence,
-          we develop your capacity to meet pressure, recover from setbacks
-          and approach trading with greater flexibility and clarity.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+              <p>
+               Performance isn't just about what you know. It's about how you respond under pressure. 
+Rather than focusing on controlling emotions or correcting unwanted behaviour through willpower or discipline, we work with the underlying nervous system patterns that shape how you respond to the stress of trading.
+              </p>
+            </div>
 
+            <div class="intro-card">
+              <h2>How it works</h2>
+
+              <p>
+                   By supporting your natural ability to adapt and self-organise, we develop your capacity to remain calm under pressure, make better decisions, and ultimately build a more enjoyable relationship with trading and life in general.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="contact-section" id="contact">
         <h2>Interested in working together?</h2>
+
         <a
           class="button button-light"
           href="https://x.com/youngtilopa"
@@ -99,7 +109,10 @@ const year = new Date().getFullYear();
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="/">trading<span>mind</span></a>
+      <a class="brand footer-brand" href="/">
+        trading<span>mind</span>
+      </a>
+
       <p class="copyright">© {year} Trading Mind</p>
     </footer>
   </body>
@@ -130,12 +143,13 @@ const year = new Date().getFullYear();
     background: var(--paper);
     color: var(--ink);
     font-family: "DM Sans", Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 14px;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
 
-  :global(a), :global(a:visited) {
+  :global(a),
+  :global(a:visited) {
     color: inherit;
     text-decoration: none;
   }
@@ -145,14 +159,22 @@ const year = new Date().getFullYear();
     outline-offset: 5px;
   }
 
-  /* First screen: header and hero fill one viewport */
+  h1,
+  h2,
+  p {
+    margin-top: 0;
+  }
+
+  /* First screen */
 
   .first-screen {
-    height: 100vh;
-    height: 100svh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
   }
+
+  /* Header */
 
   .site-header {
     min-height: 86px;
@@ -169,9 +191,9 @@ const year = new Date().getFullYear();
     display: inline-flex;
     align-items: baseline;
     white-space: nowrap;
-    font-size: 22px;
-    font-weight: 650;
-    letter-spacing: -1.25px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -1px;
     line-height: 1;
   }
 
@@ -213,6 +235,8 @@ const year = new Date().getFullYear();
     color: var(--paper);
   }
 
+  /* Hero */
+
   .hero {
     flex: 1;
     min-height: 0;
@@ -226,17 +250,13 @@ const year = new Date().getFullYear();
     max-width: 790px;
   }
 
-  h1, h2, p {
-    margin-top: 0;
-  }
-
   h1 {
     max-width: 760px;
     margin-bottom: 22px;
-    font-size: clamp(43px, 6.2vw, 77px);
+    font-size: clamp(40px, 5.2vw, 70px);
     font-weight: 450;
-    letter-spacing: -4.4px;
-    line-height: 1.07;
+    letter-spacing: -0.045em;
+    line-height: 1.08;
   }
 
   h1 em {
@@ -246,10 +266,10 @@ const year = new Date().getFullYear();
 
   .hero-description {
     max-width: 500px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     color: var(--muted);
-    font-size: 15px;
-    line-height: 1.9;
+    font-size: 14px;
+    line-height: 1.8;
   }
 
   .hero-actions {
@@ -258,18 +278,21 @@ const year = new Date().getFullYear();
     align-items: center;
   }
 
+  /* Buttons */
+
   .button {
-    min-height: 47px;
-    padding: 0 19px;
+    min-height: 44px;
+    padding: 0 18px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    font-weight: 550;
+    font-weight: 500;
     transition: background 160ms ease, color 160ms ease;
   }
 
-  .button-dark, .button-dark:visited {
+  .button-dark,
+  .button-dark:visited {
     background: var(--ink);
     color: #fff !important;
   }
@@ -278,99 +301,60 @@ const year = new Date().getFullYear();
     background: #45483d;
   }
 
-  /* Two-column coaching text */
-
- 
-/* Second section: editorial introduction */
-
-
-
-/* Three-column introduction */
-
-.editorial-intro {
-  background: #f7f6f2;
-  padding: 72px 0 80px;
-  border-bottom: 1px solid #e3e2da;
-}
-
-.editorial-intro__inner {
-  width: min(100% - 64px, 1120px);
-  margin: 0 auto;
-}
-
-
-.intro-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  width: 100%;
-}
-
-.intro-card {
-  background: transparent;
-  border: 1px solid #e3e2da;
-  border-radius: 6px;
-  padding: 24px 22px;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-@media (max-width: 700px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .button-light,
+  .button-light:visited {
+    border: 1px solid #c9cabe;
+    color: var(--ink) !important;
   }
 
-  .intro-card {
-    padding: 24px 22px;
+  .button-light:hover {
+    background: var(--soft);
   }
-}
 
+  /* Three-column introduction */
 
-.intro-card h2 {
-  margin: 0 0 18px;
-  color: #262822;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: -0.025em;
-}
-
-.intro-card p {
-  margin: 0;
-  color: #62635c;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.85;
-}
-
-/* Mobile */
-
-@media (max-width: 700px) {
   .editorial-intro {
-    padding: 48px 0 56px;
+    background: var(--paper);
+    padding: 72px 0 80px;
+    border-bottom: 1px solid var(--line);
   }
 
   .editorial-intro__inner {
-    width: calc(100% - 40px);
+    width: min(85.6%, 1120px);
+    margin: 0 auto;
   }
 
   .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
   }
 
   .intro-card {
+    min-width: 0;
     padding: 24px 22px;
+    background: transparent;
+    border: 1px solid #e3e2da;
+    border-radius: 6px;
   }
 
   .intro-card h2 {
-    margin-bottom: 12px;
-    font-size: 19px;
+    margin: 0 0 14px;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
   }
-}
 
-
+  .intro-card p {
+    margin: 0;
+    color: #62635c;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+  }
 
   /* Contact section */
 
@@ -383,21 +367,14 @@ const year = new Date().getFullYear();
   }
 
   .contact-section h2 {
-    margin-bottom: 27px;
-    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 24px;
+    font-size: clamp(28px, 2.5vw, 32px);
     font-weight: 450;
-    letter-spacing: -2px;
-    line-height: 1.2;
+    letter-spacing: -0.035em;
+    line-height: 1.25;
   }
 
-  .button-light, .button-light:visited {
-    border: 1px solid #c9cabe;
-    color: var(--ink) !important;
-  }
-
-  .button-light:hover {
-    background: var(--soft);
-  }
+  /* Footer */
 
   .site-footer {
     min-height: 83px;
@@ -422,14 +399,16 @@ const year = new Date().getFullYear();
   /* Large screens */
 
   @media (min-width: 1500px) {
-    .site-header, .hero, .text-section,
-    .contact-section, .site-footer {
+    .site-header,
+    .hero,
+    .contact-section,
+    .site-footer {
       padding-left: max(7.2%, calc((100vw - 1240px) / 2));
       padding-right: max(7.2%, calc((100vw - 1240px) / 2));
     }
   }
 
-  /* Mobile and smaller screens */
+  /* Mobile */
 
   @media (max-width: 760px) {
     .site-header {
@@ -447,49 +426,48 @@ const year = new Date().getFullYear();
       gap: 12px 21px;
     }
 
-    .nav-links a {
-      font-size: 12px;
-    }
-
-    .nav-links .nav-cta {
-      padding: 7px 10px;
-    }
-
     .hero {
       padding: 45px 6%;
     }
 
     h1 {
-      font-size: clamp(40px, 10vw, 65px);
-      letter-spacing: -2.8px;
+      font-size: clamp(40px, 9vw, 52px);
+      letter-spacing: -0.04em;
     }
 
-    .text-section {
-      padding: 68px 6% 76px;
+    .editorial-intro {
+      padding: 48px 0 56px;
     }
 
-    .text-content {
+    .editorial-intro__inner {
+      width: 88%;
+    }
+
+    .intro-grid {
       grid-template-columns: 1fr;
-      gap: 28px;
+      gap: 14px;
     }
 
-    .text-heading h2 {
-      max-width: 500px;
-      font-size: clamp(34px, 8vw, 42px);
-      letter-spacing: -1.4px;
+    .intro-card {
+      padding: 24px 22px;
     }
 
-    .text-body p {
-      font-size: 15px;
-      line-height: 1.9;
+    .intro-card h2 {
+      margin-bottom: 12px;
+      font-size: 17px;
     }
 
-    .text-body .text-lead {
-      font-size: 18px;
+    .intro-card p {
+      font-size: 14px;
+      line-height: 1.8;
     }
 
     .contact-section {
       padding: 70px 6%;
+    }
+
+    .contact-section h2 {
+      font-size: 28px;
     }
 
     .site-footer {
@@ -497,7 +475,7 @@ const year = new Date().getFullYear();
     }
   }
 
-  /* Extra spacing adjustment for short screens */
+  /* Short screens */
 
   @media (max-height: 750px) {
     .hero {
@@ -506,16 +484,20 @@ const year = new Date().getFullYear();
     }
 
     h1 {
-      font-size: clamp(40px, 5.5vw, 65px);
+      font-size: clamp(40px, 5.2vw, 62px);
     }
   }
+
+  /* Reduced motion */
 
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
       scroll-behavior: auto;
     }
 
-    :global(*), :global(*::before), :global(*::after) {
+    :global(*),
+    :global(*::before),
+    :global(*::after) {
       transition: none !important;
     }
   }
