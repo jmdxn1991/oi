@@ -49,27 +49,27 @@ const year = new Date().getFullYear();
     </div>
 
     <main>
-      <section class="editorial-intro" id="approach">
+      
+<section class="editorial-intro" id="approach">
   <div class="editorial-intro__inner">
-    <div class="editorial-intro__label">
-      <span>A different approach to trading psychology</span>
-    </div>
-
     <div class="editorial-intro__content">
       <p class="editorial-intro__lead">
-       It doesn't matter how good your strategy is if you can't execute it. If you find yourself overtrading, caught in addictive patterns, burning out or becoming overwhelmed by decisions, capacity is the constraint.
+        Knowing what to do and being able to do it under pressure are two different things.
       </p>
 
       <p>
-     Rather than focusing on controlling emotions or correcting unwanted behaviour through willpower or discipline, I work with the underlying nervous system patterns impacting your ability to perform well under pressure.
+        Trading continually tests your relationship with uncertainty, loss and control.
+        Over time, those demands can shape how you think, feel and make decisions.
       </p>
 
       <p>
-       By drawing on your natural ability to adapt and self-organise, and by following what is interesting or enjoyable, we work together to increase your general wellbeing, develop greater flexibility under pressure and more freedom in your decisions, become more resilient, and ultimately build a more sustainable relationship with trading.
+        Trading Mind works with the person navigating those demands, not just the
+        strategy they're trying to execute.
       </p>
     </div>
   </div>
 </section>
+
 
       <section class="contact-section" id="contact">
         <h2>Interested in working together?</h2>
@@ -269,39 +269,23 @@ const year = new Date().getFullYear();
  
 /* Second section: editorial introduction */
 
+
 .editorial-intro {
   background: #f7f6f2;
-  padding: 100px 0 112px;
+  padding: 88px 0 100px;
 }
 
 .editorial-intro__inner {
   width: min(100% - 64px, 1120px);
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
-  align-items: start;
-}
-
-.editorial-intro__label {
-  padding-top: 8px;
-}
-
-.editorial-intro__label span {
-  display: inline-block;
-  color: #858c70;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  line-height: 1.7;
 }
 
 .editorial-intro__content {
-  max-width: 580px;
+  width: 100%;
 }
 
 .editorial-intro__content p {
-  margin: 0 0 22px;
+  margin: 0 0 20px;
   color: #62635c;
   font-size: 16px;
   font-weight: 400;
@@ -309,7 +293,7 @@ const year = new Date().getFullYear();
 }
 
 .editorial-intro__content .editorial-intro__lead {
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   color: #262822;
   font-size: 21px;
   line-height: 1.55;
@@ -320,21 +304,13 @@ const year = new Date().getFullYear();
   margin-bottom: 0;
 }
 
-/* Responsive layout */
-
 @media (max-width: 700px) {
   .editorial-intro {
-    padding: 68px 0 76px;
+    padding: 64px 0 72px;
   }
 
   .editorial-intro__inner {
-    width: min(100% - 40px, 540px);
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .editorial-intro__label {
-    padding-top: 0;
+    width: calc(100% - 40px);
   }
 
   .editorial-intro__content .editorial-intro__lead {
@@ -346,6 +322,7 @@ const year = new Date().getFullYear();
     line-height: 1.8;
   }
 }
+
 
 
   /* Contact section */
