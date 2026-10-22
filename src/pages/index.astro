@@ -49,41 +49,27 @@ const year = new Date().getFullYear();
     </div>
 
     <main>
-      <section class="text-section" id="approach">
-        <div class="text-content">
-          <div class="text-heading">
-            <h2>A different approach to the psychology of trading</h2>
-          </div>
+      <section class="editorial-intro" id="approach">
+  <div class="editorial-intro__inner">
+    <div class="editorial-intro__label">
+      <span>A different approach to trading psychology</span>
+    </div>
 
-          <div class="text-body">
-            <p class="text-lead">
-              Trading places extraordinary demands on your ability to perform well
-              under pressure.
-            </p>
+    <div class="editorial-intro__content">
+      <p class="editorial-intro__lead">
+       It doesn't matter how good your strategy is if you can't execute it. If you find yourself overtrading, caught in addictive patterns, burning out or becoming overwhelmed by decisions, capacity is the constraint.
+      </p>
 
-            <p>
-              It doesn't matter how good your strategy is if you can't execute it.
-              If you find yourself overtrading, caught in addictive patterns, burning
-              out or becoming overwhelmed by decisions, capacity is the constraint.
-            </p>
+      <p>
+     Rather than focusing on controlling emotions or correcting unwanted behaviour through willpower or discipline, I work with the underlying nervous system patterns impacting your ability to perform well under pressure.
+      </p>
 
-            <p>
-              Rather than focusing on controlling emotions or correcting unwanted
-              behaviour through willpower or discipline, I work with the underlying
-              nervous system patterns impacting your ability to perform well under
-              pressure.
-            </p>
-
-            <p>
-              By drawing on your natural ability to adapt and self-organise, and by
-              following what is interesting or enjoyable, we work together to
-              increase your general wellbeing, develop greater flexibility under
-              pressure and more freedom in your decisions, become more resilient,
-              and ultimately build a more sustainable relationship with trading.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p>
+       By drawing on your natural ability to adapt and self-organise, and by following what is interesting or enjoyable, we work together to increase your general wellbeing, develop greater flexibility under pressure and more freedom in your decisions, become more resilient, and ultimately build a more sustainable relationship with trading.
+      </p>
+    </div>
+  </div>
+</section>
 
       <section class="contact-section" id="contact">
         <h2>Interested in working together?</h2>
@@ -280,50 +266,87 @@ const year = new Date().getFullYear();
 
   /* Two-column coaching text */
 
-  .text-section {
-    padding: 100px 7.2% 110px;
-    border-bottom: 1px solid var(--line);
+ 
+/* Second section: editorial introduction */
+
+.editorial-intro {
+  background: #f7f6f2;
+  padding: 100px 0 112px;
+}
+
+.editorial-intro__inner {
+  width: min(100% - 64px, 1120px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.editorial-intro__label {
+  padding-top: 8px;
+}
+
+.editorial-intro__label span {
+  display: inline-block;
+  color: #858c70;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+}
+
+.editorial-intro__content {
+  max-width: 580px;
+}
+
+.editorial-intro__content p {
+  margin: 0 0 22px;
+  color: #62635c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.editorial-intro__content .editorial-intro__lead {
+  margin-bottom: 28px;
+  color: #262822;
+  font-size: 21px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+}
+
+.editorial-intro__content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive layout */
+
+@media (max-width: 700px) {
+  .editorial-intro {
+    padding: 68px 0 76px;
   }
 
-  .text-content {
-    display: grid;
-    grid-template-columns: 1fr 0.85fr;
-    gap: 10%;
-    align-items: start;
+  .editorial-intro__inner {
+    width: min(100% - 40px, 540px);
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .text-heading h2 {
-    max-width: 440px;
-    margin: 0;
-    font-size: clamp(34px, 4.2vw, 52px);
-    font-weight: 450;
-    letter-spacing: -2px;
-    line-height: 1.15;
+  .editorial-intro__label {
+    padding-top: 0;
   }
 
-  .text-body {
-    padding-top: 4px;
-  }
-
-  .text-body p {
-    margin: 0 0 22px;
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.95;
-  }
-
-  .text-body p:last-child {
-    margin-bottom: 0;
-  }
-
-  .text-body .text-lead {
-    margin-bottom: 25px;
-    color: var(--ink);
+  .editorial-intro__content .editorial-intro__lead {
     font-size: 19px;
-    font-weight: 500;
-    letter-spacing: -0.4px;
-    line-height: 1.6;
   }
+
+  .editorial-intro__content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
 
   /* Contact section */
 
