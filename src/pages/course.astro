@@ -27,13 +27,17 @@ const bonus = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Free trading education from Trading Mind, covering market structure, liquidity, volatility, volume profile, orderflow and psychology."
+      content="Free price action and orderflow education from Trading Mind, covering market structure, liquidity, volatility, volume profile and trading psychology"
     />
     <meta name="theme-color" content="#22241f" />
-    <title>Trading Education — Trading Mind</title>
+    <title>Price Action and Orderflow Course — Trading Mind</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap"
       rel="stylesheet"
@@ -41,14 +45,14 @@ const bonus = {
 
     <style>
       :root {
-  color-scheme: dark;
-  --paper: #22241f;
-  --ink: #f7f6f0;
-  --muted: #d0d0c6;
-  --sage: #b4bd94;
-  --line: #484a41;
-  --button-text: #22241f;
-}
+        color-scheme: dark;
+        --paper: #22241f;
+        --ink: #f7f6f0;
+        --muted: #d0d0c6;
+        --sage: #b4bd94;
+        --line: #484a41;
+        --button-text: #22241f;
+      }
 
       *,
       *::before,
@@ -280,10 +284,14 @@ const bonus = {
       .contact {
         border-top: 1px solid var(--line);
         padding: 76px 7.2% 82px;
-        text-align: left;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .contact h2 {
+        max-width: 660px;
         margin: 0;
         font-size: clamp(28px, 3.2vw, 38px);
         font-weight: 450;
@@ -292,8 +300,8 @@ const bonus = {
       }
 
       .contact p {
-        max-width: 410px;
-        margin: 15px 0 0;
+        max-width: 490px;
+        margin: 15px auto 0;
         color: var(--muted);
         font-size: 14px;
       }
@@ -424,7 +432,7 @@ const bonus = {
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="/#approach">Approach</a>
+        <a href="/">Coaching</a>
         <a href="/course">Free course</a>
         <a class="nav-contact" href="/#contact">Get in touch</a>
       </nav>
@@ -434,14 +442,13 @@ const bonus = {
       <section class="hero">
         <div class="hero-content">
           <h1>
-            Trading
-            <span>education</span>
+            Price action and
+            <span>orderflow course</span>
           </h1>
 
           <p class="hero-description">
             A free video course covering market structure, liquidity,
-            volatility, volume profile, orderflow and trading psychology.
-            Work through the lessons at your own pace.
+            volatility, volume profile, orderflow and trading psychology
           </p>
         </div>
       </section>
@@ -498,9 +505,10 @@ const bonus = {
 
       <section class="contact" id="coaching">
         <h2>Interested in working together?</h2>
+
         <p>
           If you'd like to explore one-to-one coaching focused on your
-          capacity to navigate the demands of trading, get in touch.
+          capacity to navigate the demands of trading, get in touch
         </p>
 
         <a
