@@ -50,22 +50,36 @@ const year = new Date().getFullYear();
 
     <main>
       
+
 <section class="editorial-intro" id="approach">
   <div class="editorial-intro__inner">
-    <div class="editorial-intro__content">
-      <p class="editorial-intro__lead">
-        Knowing what to do and being able to do it under pressure are two different things.
-      </p>
+    <div class="intro-grid">
+      <div class="intro-card">
+        <h2>The challenge</h2>
+        <p>
+          Trading asks a lot of you psychologically. Uncertainty, losses,
+          risk and missed opportunities can place sustained demands on your
+          ability to think clearly and act with intention.
+        </p>
+      </div>
 
-      <p>
-        Trading continually tests your relationship with uncertainty, loss and control.
-        Over time, those demands can shape how you think, feel and make decisions.
-      </p>
+      <div class="intro-card">
+        <h2>A different approach</h2>
+        <p>
+          Knowing what to do and being able to do it under pressure are
+          two different things. Rather than focusing only on strategy,
+          we work with the person navigating the demands of trading.
+        </p>
+      </div>
 
-      <p>
-        Trading Mind works with the person navigating those demands, not just the
-        strategy they're trying to execute.
-      </p>
+      <div class="intro-card">
+        <h2>How it works</h2>
+        <p>
+          Through one-to-one coaching informed by Organic Intelligence,
+          we develop your capacity to meet pressure, recover from setbacks
+          and approach trading with greater flexibility and clarity.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -270,9 +284,13 @@ const year = new Date().getFullYear();
 /* Second section: editorial introduction */
 
 
+
+/* Three-column introduction */
+
 .editorial-intro {
   background: #f7f6f2;
-  padding: 88px 0 100px;
+  padding: 72px 0 80px;
+  border-bottom: 1px solid #e3e2da;
 }
 
 .editorial-intro__inner {
@@ -280,46 +298,59 @@ const year = new Date().getFullYear();
   margin: 0 auto;
 }
 
-.editorial-intro__content {
-  width: 100%;
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
 }
 
-.editorial-intro__content p {
-  margin: 0 0 20px;
+.intro-card {
+  background: transparent;
+  border: 1px solid #e3e2da;
+  border-radius: 6px;
+  padding: 30px 26px;
+}
+
+.intro-card h2 {
+  margin: 0 0 18px;
+  color: #262822;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.intro-card p {
+  margin: 0;
   color: #62635c;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.85;
 }
 
-.editorial-intro__content .editorial-intro__lead {
-  margin-bottom: 24px;
-  color: #262822;
-  font-size: 21px;
-  line-height: 1.55;
-  letter-spacing: -0.025em;
-}
-
-.editorial-intro__content p:last-child {
-  margin-bottom: 0;
-}
+/* Mobile */
 
 @media (max-width: 700px) {
   .editorial-intro {
-    padding: 64px 0 72px;
+    padding: 48px 0 56px;
   }
 
   .editorial-intro__inner {
     width: calc(100% - 40px);
   }
 
-  .editorial-intro__content .editorial-intro__lead {
-    font-size: 19px;
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .editorial-intro__content p {
-    font-size: 15px;
-    line-height: 1.8;
+  .intro-card {
+    padding: 24px 22px;
+  }
+
+  .intro-card h2 {
+    margin-bottom: 12px;
+    font-size: 19px;
   }
 }
 
