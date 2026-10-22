@@ -3,51 +3,15 @@
 const year = new Date().getFullYear();
 
 const lessons = [
-  {
-    number: "01",
-    title: "Market Microstructure and Liquidity Basics",
-    id: "ece8e22d4c8bab1080123059337a5efd",
-  },
-  {
-    number: "02",
-    title: "Identifying Key Structures (Flags and Flag Limits)",
-    id: "7195a57d5c24c8c7884cde1ad3aba05e",
-  },
-  {
-    number: "03",
-    title: "Market Structure (Engulf and FTR)",
-    id: "e0bdd98b82052e3e13fa1407c672e1bc",
-  },
-  {
-    number: "04",
-    title: "Anticipating Volatility (Liquidity Gaps and Compression)",
-    id: "90a1f82e53168f5ca2f47c85b90ac971",
-  },
-  {
-    number: "05",
-    title: "Navigating Scale (Trading Flow and Managing Expectations)",
-    id: "799078cd2ca73d29cbb9b3901cb3971a",
-  },
-  {
-    number: "06",
-    title: "Volume Profile",
-    id: "4075efd8f38c2ff75d860bd2f2202ea6",
-  },
-  {
-    number: "07",
-    title: "False Breaks",
-    id: "48fb22e7eecdea58ba7ac2f24b2dd950",
-  },
-  {
-    number: "08",
-    title: "Orderflow Dynamics and the Footprint",
-    id: "868cdd5af104fafc12705f9e01671186",
-  },
-  {
-    number: "09",
-    title: "Psychology",
-    id: "a4ad8289e0b0997dc64dbc48f7ce38bc",
-  },
+  { number: "01", title: "Market Microstructure and Liquidity Basics", id: "ece8e22d4c8bab1080123059337a5efd" },
+  { number: "02", title: "Identifying Key Structures (Flags and Flag Limits)", id: "7195a57d5c24c8c7884cde1ad3aba05e" },
+  { number: "03", title: "Market Structure (Engulf and FTR)", id: "e0bdd98b82052e3e13fa1407c672e1bc" },
+  { number: "04", title: "Anticipating Volatility (Liquidity Gaps and Compression)", id: "90a1f82e53168f5ca2f47c85b90ac971" },
+  { number: "05", title: "Navigating Scale (Trading Flow and Managing Expectations)", id: "799078cd2ca73d29cbb9b3901cb3971a" },
+  { number: "06", title: "Volume Profile", id: "4075efd8f38c2ff75d860bd2f2202ea6" },
+  { number: "07", title: "False Breaks", id: "48fb22e7eecdea58ba7ac2f24b2dd950" },
+  { number: "08", title: "Orderflow Dynamics and the Footprint", id: "868cdd5af104fafc12705f9e01671186" },
+  { number: "09", title: "Psychology", id: "a4ad8289e0b0997dc64dbc48f7ce38bc" },
 ];
 
 const bonus = {
@@ -63,10 +27,10 @@ const bonus = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Explore the free Trading Mind trading course, covering market structure, liquidity, volatility, volume profile, orderflow and psychology."
+      content="Free trading education from Trading Mind, covering market structure, liquidity, volatility, volume profile, orderflow and psychology."
     />
     <meta name="theme-color" content="#22241f" />
-    <title>Free Trading Course — Trading Mind</title>
+    <title>Trading Education — Trading Mind</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -157,14 +121,20 @@ const bonus = {
         transition: color 180ms ease;
       }
 
-      nav a:hover,
-      nav a[aria-current="page"] {
+      nav a:hover {
         color: var(--ink);
       }
 
-      nav a[aria-current="page"] {
-        border-bottom: 1px solid var(--sage);
-        padding-bottom: 3px;
+      nav .nav-contact {
+        color: var(--ink);
+        border: 1px solid #606157;
+        padding: 9px 15px;
+        border-radius: 4px;
+      }
+
+      nav .nav-contact:hover {
+        border-color: var(--sage);
+        color: var(--sage);
       }
 
       .hero {
@@ -174,7 +144,7 @@ const bonus = {
       .hero-content {
         width: 100%;
         max-width: 900px;
-        margin: 0 auto;
+        margin: 0;
       }
 
       h1 {
@@ -198,44 +168,17 @@ const bonus = {
         line-height: 1.9;
       }
 
-      .course-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px 22px;
-        margin-top: 24px;
-        color: var(--muted);
-        font-size: 12px;
-      }
-
-      .course-meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .course-meta span::before {
-        content: "";
-        display: inline-block;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: var(--sage);
-      }
-
       .curriculum {
         padding: 0 7.2% 88px;
       }
 
       .curriculum-inner {
+        width: 100%;
         max-width: 900px;
-        margin: 0 auto;
+        margin: 0;
       }
 
       .curriculum-heading {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 20px;
         padding: 0 0 17px;
         border-bottom: 1px solid var(--line);
       }
@@ -245,12 +188,6 @@ const bonus = {
         font-size: 19px;
         font-weight: 500;
         letter-spacing: -0.03em;
-      }
-
-      .curriculum-heading p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 12px;
       }
 
       .lesson {
@@ -343,7 +280,7 @@ const bonus = {
       .contact {
         border-top: 1px solid var(--line);
         padding: 76px 7.2% 82px;
-        text-align: center;
+        text-align: left;
       }
 
       .contact h2 {
@@ -356,7 +293,7 @@ const bonus = {
 
       .contact p {
         max-width: 410px;
-        margin: 15px auto 0;
+        margin: 15px 0 0;
         color: var(--muted);
         font-size: 14px;
       }
@@ -406,13 +343,6 @@ const bonus = {
         font-size: 11px;
       }
 
-      @media (min-width: 1400px) {
-        .hero {
-          padding-top: 100px;
-          padding-bottom: 85px;
-        }
-      }
-
       @media (max-width: 700px) {
         header {
           padding: 24px 6%;
@@ -426,6 +356,10 @@ const bonus = {
           justify-content: flex-start;
           flex-wrap: wrap;
           gap: 13px 23px;
+        }
+
+        nav .nav-contact {
+          padding: 6px 10px;
         }
 
         .hero {
@@ -444,12 +378,6 @@ const bonus = {
 
         .curriculum {
           padding: 0 6% 65px;
-        }
-
-        .curriculum-heading {
-          align-items: flex-start;
-          flex-direction: column;
-          gap: 4px;
         }
 
         .lesson summary {
@@ -496,8 +424,9 @@ const bonus = {
       </a>
 
       <nav aria-label="Main navigation">
-        <a href="/" >Home</a>
-        <a href="/course" aria-current="page">Free course</a>
+        <a href="/#approach">Approach</a>
+        <a href="/course">Free course</a>
+        <a class="nav-contact" href="/#contact">Get in touch</a>
       </nav>
     </header>
 
@@ -505,8 +434,8 @@ const bonus = {
       <section class="hero">
         <div class="hero-content">
           <h1>
-            The trading
-            <span>course.</span>
+            Trading
+            <span>education</span>
           </h1>
 
           <p class="hero-description">
@@ -514,12 +443,6 @@ const bonus = {
             volatility, volume profile, orderflow and trading psychology.
             Work through the lessons at your own pace.
           </p>
-
-          <div class="course-meta">
-            <span>9 lessons</span>
-            <span>Plus Q&amp;A</span>
-            <span>Free access</span>
-          </div>
         </div>
       </section>
 
@@ -527,7 +450,6 @@ const bonus = {
         <div class="curriculum-inner">
           <div class="curriculum-heading">
             <h2>Course lessons</h2>
-            <p>Select a lesson to watch the video.</p>
           </div>
 
           {lessons.map((lesson) => (
