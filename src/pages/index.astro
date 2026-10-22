@@ -298,18 +298,34 @@ const year = new Date().getFullYear();
   margin: 0 auto;
 }
 
+
 .intro-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+  width: 100%;
 }
 
 .intro-card {
   background: transparent;
   border: 1px solid #e3e2da;
   border-radius: 6px;
-  padding: 30px 26px;
+  padding: 24px 22px;
+  min-width: 0;
+  box-sizing: border-box;
 }
+
+@media (max-width: 700px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .intro-card {
+    padding: 24px 22px;
+  }
+}
+
 
 .intro-card h2 {
   margin: 0 0 18px;
